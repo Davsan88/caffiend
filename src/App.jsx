@@ -1,3 +1,5 @@
+import CoffeeForm from "./components/CoffeeForm"
+import Hero from "./components/Hero"
 import Layout from "./components/Layout"
 
 
@@ -8,7 +10,8 @@ function App() {
   return (
     <Layout>
       <Hero />
-    <Layout/>
+      <CoffeeForm />
+    </Layout>
   )
 }
 
