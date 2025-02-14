@@ -6,5 +6,5 @@ const Stats = () => {
     )
   }
   
-  export default Hero
+  export default Stats
   

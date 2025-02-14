@@ -6,5 +6,5 @@ const History = () => {
     )
   }
   
-  export default Hero
+  export default History
   

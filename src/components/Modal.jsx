@@ -6,5 +6,5 @@ const Modal = () => {
     )
   }
   
-  export default Hero
+  export default Modal
   

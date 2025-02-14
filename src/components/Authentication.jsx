@@ -6,5 +6,5 @@ const Authentication = () => {
     )
   }
   
-  export default Hero
+  export default Authentication
   

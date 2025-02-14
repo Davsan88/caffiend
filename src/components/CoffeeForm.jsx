@@ -6,5 +6,5 @@ const CoffeeForm = () => {
     )
   }
   
-  export default Hero
+  export default CoffeeForm
   
