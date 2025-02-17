@@ -13,7 +13,10 @@ const Layout = ({ children }) => {
     )
 
     const footer = (
-        <footer></footer>
+        <footer>
+            <p><span className="text-gradient">Caffiend</span> was made by <a href="https://davsan88.netlify.app/" target="_blank"> Davsan</a> using the <a href="https://www.fantacss.smoljames.com/" target="_blank"> FantaCSS</a> design library.
+            </p>
+        </footer>
     )
 
     return (
