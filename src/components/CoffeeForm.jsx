@@ -1,6 +1,10 @@
 import { coffeeOptions } from "../utils"
+import { useState } from "react"
 
 const CoffeeForm = () => {
+  const [coffeeSelection, setCoffeeSelection] = useState(null)
+  const [showCoffeeTypes, setShowCoffeeTypes] = useState(false)
+
   return (
     <>
       <div className="section-header">
