@@ -8,6 +8,9 @@ const CoffeeForm = () => {
   const [hour, setHour] = useState(0)
   const [min, setMin] = useState(0)
 
+
+  const handleSubmitForm = () => console.log(selectedCoffee, coffeeCost, hour, min)
+
   return (
     <>
       <div className="section-header">
@@ -96,7 +99,9 @@ const CoffeeForm = () => {
             })}
           </select>
         </div>
-        <button>
+        <button
+          onClick={handleSubmitForm}
+        >
           Add Entry
         </button>
       </div>
