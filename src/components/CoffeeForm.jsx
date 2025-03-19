@@ -5,6 +5,8 @@ const CoffeeForm = () => {
   const [selectedCoffee, setSelectedCoffee] = useState(null)
   const [showCoffeeTypes, setShowCoffeeTypes] = useState(false)
   const [coffeeCost, setCoffeeCost] = useState(0)
+  const [hour, setHour] = useState(0)
+  const [min, setMin] = useState(0)
 
   return (
     <>
@@ -70,7 +72,10 @@ const CoffeeForm = () => {
       <div className="time-entry">
         <div>
           <h6>Hours</h6>
-          <select id="hour-select">
+          <select
+            id="hour-select"
+            onChange={(e) => setHour(e.target.value)}
+          >
             {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23].map((hour, hourIndex) => {
               return (
                 <option key={hourIndex} value={hour}>{hour}</option>
@@ -80,7 +85,10 @@ const CoffeeForm = () => {
         </div>
         <div>
           <h6>Mins</h6>
-          <select id="mins-select">
+          <select
+            id="mins-select"
+            onChange={(e) => setMin(e.target.value)}
+          >
             {[0, 5, 10, 15, 30, 45].map((min, minIndex) => {
               return (
                 <option key={minIndex} value={min}>{min}</option>
