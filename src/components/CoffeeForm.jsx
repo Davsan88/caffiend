@@ -40,16 +40,22 @@ const CoffeeForm = () => {
         </button>
       </div>
       {showCoffeeTypes && (
-        <select name="coffee-list" id="coffee-list">
-        <option value={null}>Select fuel</option>
-        {coffeeOptions.map((option, optionIndex) => {
-          return (
-            <option value={option} key={optionIndex}>
-              {option.name} ({option.caffeine}mg)
-            </option>
-          )
-        })}
-      </select>)}
+        <select
+          onChange={(e) => {
+            setSelectedCoffee(e.target.value)
+          }}
+          name="coffee-list"
+          id="coffee-list"
+        >
+          <option value={null}>Select fuel</option>
+          {coffeeOptions.map((option, optionIndex) => {
+            return (
+              <option value={option.name} key={optionIndex}>
+                {option.name} ({option.caffeine}mg)
+              </option>
+            )
+          })}
+        </select>)}
 
       <h4>Add the cost (£)</h4>
       <input className="w-full" type="number" placeholder="£4.20" />
