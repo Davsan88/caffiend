@@ -15,13 +15,17 @@ const CoffeeForm = () => {
       <div className="coffee-grid">
         {coffeeOptions.slice(0, 5).map((option, optionIndex) => {
           return (
-            <button onClick={() => {setSelectedCoffee(option.name)}} className="button-card" key={optionIndex}>
+            <button
+              onClick={() => { setSelectedCoffee(option.name) }} 
+              className={"button-card " + (option.name === selectedCoffee ? ' coffee-button-selected' : ' ')} 
+              key={optionIndex}
+            >
               <h4>{option.name}</h4>
               <p>{option.caffeine}mg</p>
             </button>
           )
         })}
-        <button onClick={() => {setShowCoffeeTypes(true)}} className="button-card">
+        <button onClick={() => { setShowCoffeeTypes(true) }} className="button-card">
           <h4>Other</h4>
           <p>n/a</p>
         </button>
