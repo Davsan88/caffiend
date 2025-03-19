@@ -16,8 +16,11 @@ const CoffeeForm = () => {
         {coffeeOptions.slice(0, 5).map((option, optionIndex) => {
           return (
             <button
-              onClick={() => { setSelectedCoffee(option.name) }} 
-              className={"button-card " + (option.name === selectedCoffee ? ' coffee-button-selected' : ' ')} 
+              onClick={() => {
+                setSelectedCoffee(option.name)
+                setShowCoffeeTypes(false)
+              }}
+              className={"button-card " + (option.name === selectedCoffee ? ' coffee-button-selected' : ' ')}
               key={optionIndex}
             >
               <h4>{option.name}</h4>
@@ -25,7 +28,13 @@ const CoffeeForm = () => {
             </button>
           )
         })}
-        <button onClick={() => { setShowCoffeeTypes(true) }} className="button-card">
+        <button
+          onClick={() => {
+            setShowCoffeeTypes(true)
+            setSelectedCoffee(null)
+          }}
+          className={"button-card " + (showCoffeeTypes ? ' coffe-button-selected' : ' ')}
+        >
           <h4>Other</h4>
           <p>n/a</p>
         </button>
@@ -40,6 +49,7 @@ const CoffeeForm = () => {
           )
         })}
       </select>
+
       <h4>Add the cost (£)</h4>
       <input className="w-full" type="number" placeholder="£4.20" />
       <h4>Time since consumption</h4>
