@@ -4,6 +4,7 @@ import { useState } from "react"
 const CoffeeForm = () => {
   const [selectedCoffee, setSelectedCoffee] = useState(null)
   const [showCoffeeTypes, setShowCoffeeTypes] = useState(false)
+  const [coffeeCost, setCoffeeCost] = useState(0)
 
   return (
     <>
@@ -58,7 +59,13 @@ const CoffeeForm = () => {
         </select>)}
 
       <h4>Add the cost (£)</h4>
-      <input className="w-full" type="number" placeholder="£4.20" />
+      <input
+        className="w-full"
+        type="number"
+        value={coffeeCost}
+        onChange={(e) => { setCoffeeCost(e.target.value) }}
+        placeholder="£4.20"
+      />
       <h4>Time since consumption</h4>
       <div className="time-entry">
         <div>
