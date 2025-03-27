@@ -1,4 +1,4 @@
-import { calculateCurrentCaffeineLevel, coffeeConsumptionHistory } from "../utils"
+import { calculateCurrentCaffeineLevel, coffeeConsumptionHistory, statusLevels } from "../utils"
 
 const StatCard = ({ lg, title, children }) => {
   return (
@@ -28,8 +28,10 @@ const Stats = () => {
       <div className="stats-grid">
         <StatCard lg title="Active Caffeine Level">
           <div className="status">
-            <p><span>{caffeineLevel}</span>mg</p>
+            <p><span className="stat-text">{caffeineLevel}</span>mg</p>
+            <h5 style={{color: statusLevels['low'].color, background: statusLevels['low'].background}}>Low</h5>
           </div>
+          <p>{statusLevels['low'].description}</p>
         </StatCard>
         <StatCard title="Daily Caffeine"></StatCard>
         <StatCard title="Average # of Coffees"></StatCard>
