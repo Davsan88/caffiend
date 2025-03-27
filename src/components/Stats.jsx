@@ -33,10 +33,18 @@ const Stats = () => {
           </div>
           <p>{statusLevels['low'].description}</p>
         </StatCard>
-        <StatCard title="Daily Caffeine"></StatCard>
-        <StatCard title="Average # of Coffees"></StatCard>
-        <StatCard title="Daily Cost (£)"></StatCard>
-        <StatCard title="Total Cost (£)"></StatCard>
+        <StatCard title="Daily Caffeine">
+          <p><span className="stat-text">{stats.daily_caffeine}</span>mg</p>
+        </StatCard>
+        <StatCard title="Average # of Coffees">
+        <p><span className="stat-text">{stats.average_coffees}</span></p>
+        </StatCard>
+        <StatCard title="Daily Cost (£)">
+          <p>£ <span className="stat-text">{stats.daily_cost}</span></p>
+        </StatCard>
+        <StatCard title="Total Cost (£)">
+          <p>£ <span className="stat-text">{stats.total_cost}</span></p>
+        </StatCard>
       </div>
     </>
   )
