@@ -18,6 +18,12 @@ const Stats = () => {
   }
 
   const caffeineLevel = calculateCurrentCaffeineLevel(coffeeConsumptionHistory)
+  const warningLevel = 
+    caffeineLevel < statusLevels['low'].maxLevel
+    ? 'low' 
+    : caffeineLevel < statusLevels['moderate'].maxLevel 
+    ? 'moderate' 
+    : 'high'
 
   return (
     <>
